@@ -68,7 +68,7 @@
                                 </OnPlatform>
                             </button:SfButton.FontFamily>
                         </button:SfButton>
-                        <Label Text="PMO Apps Version 1.0" FontSize="Subtitle" VerticalOptions="CenterAndExpand" Margin="0,50,0,0"  HorizontalOptions="CenterAndExpand" TextColor="Black">
+                        <Label Text="Project Management System (Sufi)" FontSize="Subtitle" VerticalOptions="CenterAndExpand" Margin="0,50,0,0"  HorizontalOptions="CenterAndExpand" TextColor="Black">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
