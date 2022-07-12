@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="background1.png"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" 
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             x:Class="PMOApp.Views.MainFormPage.MainForm">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="20,0,20,0">
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0">
+                        <Image Source="logo.png" Margin="0,10,0,0" HeightRequest="200"/>
+                    </StackLayout>
+                    
+                    <StackLayout Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Grid.Row="2" Margin="0,20,0,0" >
+                                <Label x:Name="lblUserName" Text="User Name" TextColor="Black" FontSize="16" VerticalOptions="CenterAndExpand">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                            <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <StackLayout>
+                                    <inputLayout:SfTextInputLayout x:Name="UName" Hint="User Name" UnfocusedColor="#0A4964" FocusedColor="#0A4964" ContainerType="Outlined" OutlineCornerRadius="5" ContainerBackgroundColor="Transparent"  LeadingViewPosition="Inside" >
+                                        <Entry x:Name="EntUserName" PlaceholderColor="Black" TextColor="Black" FontSize="17"  />
+                                    </inputLayout:SfTextInputLayout>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="3"  >
+                                <Label x:Name="lblDepartment" Text="Choose Department" TextColor="Black" FontSize="16" VerticalOptions="CenterAndExpand">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                            <On Platform="iOS" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <StackLayout>
+                                    <combobox:SfComboBox SelectionChanged="CboDepartment_SelectionChanged"  HeightRequest="40" NoResultsFoundText="No Result Found" NoResultsFoundFontAttributes="Bold" x:Name="CboDepartment" BorderColor="Black"  MaximumDropDownHeight="200" IsEditableMode="true" Watermark=" " TextSize="14" >
+                                        <combobox:SfComboBox.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                                <On Platform="iOS" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                            </OnPlatform>
+                                        </combobox:SfComboBox.FontFamily>
+                                    </combobox:SfComboBox>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="4"  >
+                                <Label x:Name="LblIc" Text="I/C Number" TextColor="Black" FontSize="16" VerticalOptions="CenterAndExpand">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                            <On Platform="iOS" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <StackLayout>
+                                    <inputLayout:SfTextInputLayout x:Name="icnum" Hint="I/C Number" UnfocusedColor="#0A4964" FocusedColor="#0A4964" ContainerType="Outlined" OutlineCornerRadius="5" ContainerBackgroundColor="Transparent"  LeadingViewPosition="Inside" >
+                                        <Entry x:Name="EntIcNo" PlaceholderColor="Black" TextColor="Black" FontSize="17"/>
+                                    </inputLayout:SfTextInputLayout>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="5"  >
+                                <Label x:Name="LblFonNumber" Text="Phone Number" TextColor="Black" FontSize="16" VerticalOptions="CenterAndExpand">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                            <On Platform="iOS" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <StackLayout>
+                                    <inputLayout:SfTextInputLayout x:Name="fonnum" Hint="Phone Number" UnfocusedColor="#0A4964" FocusedColor="#0A4964" ContainerType="Outlined" OutlineCornerRadius="5" ContainerBackgroundColor="Transparent"  LeadingViewPosition="Inside" >
+                                        <Entry x:Name="EntPhoneNumber" PlaceholderColor="Black" TextColor="Black" FontSize="17"  />
+                                    </inputLayout:SfTextInputLayout>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="6"  >
+                                <Label x:Name="LblBloodType" Text="Blood Type" TextColor="Black" FontSize="16" VerticalOptions="CenterAndExpand">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="Android" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                            <On Platform="iOS" Value="Roboto_Bold_700.ttf#Roboto_Bold_700"/>
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Label>
+                                <StackLayout>
+                                    <inputLayout:SfTextInputLayout x:Name="blodtyp"  Hint="Blood Type" UnfocusedColor="#0A4964" FocusedColor="#0A4964" ContainerType="Outlined" OutlineCornerRadius="5"  ContainerBackgroundColor="Transparent"  LeadingViewPosition="Inside" >
+                                        <Entry x:Name="EntBloodType" PlaceholderColor="Black" TextColor="Black" FontSize="17" />
+                                    </inputLayout:SfTextInputLayout>
+                                </StackLayout>
+                            </StackLayout>
+
+                            
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" x:Name="StackTiadaKadMedia">
+
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                        <button:SfButton Text="REGISTER" x:Name="BtnRegister" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" CornerRadius="15" Clicked="BtnRegister_Clicked" >
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#25CDBE" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#0B998D" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+                            </button:SfButton.BackgroundGradient>
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+                        <button:SfButton Text="BACK" x:Name="BtnBack" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" CornerRadius="15" Clicked="BtnBack_Clicked" >
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#28048e" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#170058" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+                            </button:SfButton.BackgroundGradient>
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+                    </StackLayout>
+                </Grid>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

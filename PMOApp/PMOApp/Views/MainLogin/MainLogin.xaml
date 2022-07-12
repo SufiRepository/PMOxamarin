@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" 
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             BackgroundImageSource="white.png"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="PMOApp.Views.MainLogin.MainLogin">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="15,0,15,0">
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="1">
+                        <Image Source="nexus.png" WidthRequest="250" Margin="0,50,0,0"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Margin="0,20,0,0" >
+                        <StackLayout>
+                            <inputLayout:SfTextInputLayout x:Name="FrameId" Hint="User ID" UnfocusedColor="#0A4964" FocusedColor="#0A4964"  ContainerBackgroundColor="Transparent" ContainerType="Outlined" OutlineCornerRadius="5" LeadingViewPosition="Inside" >
+                                <Entry x:Name="IdPengguna" PlaceholderColor="Black" TextColor="Black" FontSize="17" Text="{Binding email}" />
+                                <inputLayout:SfTextInputLayout.TrailingView>
+                                    <Label Text="&#128231;" TextColor="Black"/>
+                                </inputLayout:SfTextInputLayout.TrailingView>
+                            </inputLayout:SfTextInputLayout>
+
+                            <inputLayout:SfTextInputLayout x:Name="EntryPassword" Hint="Password" ContainerBackgroundColor="Transparent" ContainerType="Outlined" OutlineCornerRadius="5" LeadingViewPosition="Inside"  EnablePasswordVisibilityToggle="True" UnfocusedColor="#0A4964" FocusedColor="#0A4964" >
+                                <Entry x:Name="kataLaluan" IsPassword="True" Text="{Binding password}" FontSize="17" TextColor="Black"/>
+                                <inputLayout:SfTextInputLayout.TrailingView>
+                                    <Label Text="&#128274; " TextColor="Black"/>
+                                </inputLayout:SfTextInputLayout.TrailingView>
+                            </inputLayout:SfTextInputLayout>
+
+                            <Label Text="" x:Name="msgWrong" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small" TextColor="Red" IsVisible="False"    >
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                        <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" >
+                        <button:SfButton Text="LOG IN" x:Name="login" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" CornerRadius="15" Clicked="LogMasuk_Clicked" >
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#000000" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#000000" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+                            </button:SfButton.BackgroundGradient>
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+                        <Label Text="PMO Apps Version 1.0" FontSize="Subtitle" VerticalOptions="CenterAndExpand" Margin="0,50,0,0"  HorizontalOptions="CenterAndExpand" TextColor="Black">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

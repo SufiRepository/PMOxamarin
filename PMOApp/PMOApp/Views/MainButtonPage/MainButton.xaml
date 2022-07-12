@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             NavigationPage.HasBackButton="False"
+             BackgroundImageSource="background4.png"
+             x:Class="PMOApp.Views.MainButtonPage.MainButton">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                    <Label x:Name="TxtLabel" Text="TYPE OF BUTTON" HorizontalOptions="CenterAndExpand" FontSize="18" TextColor="Black" Margin="0,50,0,0" >
+                        <Label.FontFamily>
+                            <OnPlatform x:TypeArguments="x:String">
+                                <On Platform="Android" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                                <On Platform="iOS" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    
+                    
+                    <StackLayout>
+                        <Button x:Name="btn1" Text="NORMAL XAMARIN FORM BUTTON" Margin="0,20,0,0" WidthRequest="350" CornerRadius="5"/>
+
+                        <button:SfButton x:Name="btn2" Text="SYNCFUSION BUTTON" TextColor="White" FontSize="Small" HeightRequest="47" CornerRadius="5" />
+
+                        <button:SfButton x:Name="btn3" Text="SYNCFUSION BUTTON GRADIENT COLOR" TextColor="White" FontSize="Small" HeightRequest="47" CornerRadius="5" >
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#38C931" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#1A5417" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+                            </button:SfButton.BackgroundGradient>
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+
+                        <button:SfButton x:Name="btn4" Text="SYNCFUSION BUTTON WITH ICON" TextColor="White" FontSize="Small" HeightRequest="47" CornerRadius="5" ShowIcon="True" ImageSource="verified.png" ImageAlignment="Start">
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#F781C1" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#CB257F" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+
+                            </button:SfButton.BackgroundGradient>
+
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+
+                        <button:SfButton x:Name="btn5" Text="SYNCFUSION BUTTON WITH ICON" TextColor="White" FontSize="Small" HeightRequest="47" CornerRadius="5" ShowIcon="True" ImageSource="userprofile.png" ImageAlignment="End">
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#4FACD8" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#085D85" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+
+                            </button:SfButton.BackgroundGradient>
+
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+
+                        <button:SfButton  x:Name="btn6" Text="SYNCFUSION BUTTON HAS SHADOW" TextColor="White" FontSize="Small" HeightRequest="47" CornerRadius="5" HasShadow="True" BorderColor="Gray"  >
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#6925CB" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#3B0885" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+
+                            </button:SfButton.BackgroundGradient>
+
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+
+                        <button:SfButton  x:Name="btnback" Text="BACK TO DASHBOARD" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" CornerRadius="15" Clicked="btnBack_Clicked" Margin="0,20,0,0">
+                            <button:SfButton.BackgroundGradient>
+                                <gradient:SfLinearGradientBrush>
+                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                        <gradient:SfGradientStop Color="#1ECB9F" Offset="0"/>
+                                        <gradient:SfGradientStop Color="#078968" Offset="1"/>
+                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                </gradient:SfLinearGradientBrush>
+                            </button:SfButton.BackgroundGradient>
+                            <button:SfButton.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                                    <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                                </OnPlatform>
+                            </button:SfButton.FontFamily>
+                        </button:SfButton>
+                    </StackLayout>
+
+                    
+
+                </StackLayout>
+ 
+                
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

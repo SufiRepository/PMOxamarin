@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasBackButton="False"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" 
+             BackgroundImageSource="background4.png"
+             x:Class="PMOApp.Views.MainScan.MainScan">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,0,10,10" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image Source="qr.png" WidthRequest="300"  />
+                <Label x:Name="TxtLabel1" Text="QR OR BARCODE SCANNER" HorizontalOptions="CenterAndExpand" FontSize="18" TextColor="Black" Margin="0,40,0,0" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                            <On Platform="iOS" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+
+                <button:SfButton Text="SCAN QR OR BARCODE" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" WidthRequest="450" CornerRadius="5" Clicked="BtnScan_Click" >
+                    <button:SfButton.BackgroundGradient>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Color="#EF6089" Offset="0"/>
+                                <gradient:SfGradientStop Color="#C70039" Offset="1"/>
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </button:SfButton.BackgroundGradient>
+                    <button:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                            <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                        </OnPlatform>
+                    </button:SfButton.FontFamily>
+                </button:SfButton>
+
+                <button:SfButton Text="BACK" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" WidthRequest="450" CornerRadius="5" Clicked="btnBack_Click" >
+                    <button:SfButton.BackgroundGradient>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Color="#1ECB9F" Offset="0"/>
+                                <gradient:SfGradientStop Color="#078968" Offset="1"/>
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </button:SfButton.BackgroundGradient>
+                    <button:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                            <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                        </OnPlatform>
+                    </button:SfButton.FontFamily>
+                </button:SfButton>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

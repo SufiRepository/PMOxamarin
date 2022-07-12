@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            NavigationPage.HasBackButton="False"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+            xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" 
+            BackgroundImageSource="background4.png"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="#E8E8E8"
+            BarTextColor="Black"
+            x:Class="PMOApp.Views.MainTabPage.MainTabPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="User Profile" IconImageSource="userprofile.png">
+        <ScrollView>
+            <StackLayout Margin="10,10,10,10" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image Source="logo.png" WidthRequest="250" Margin="0,50,0,0"/>
+                <Label x:Name="TxtLabel1" Text="TABBED PAGE 1" HorizontalOptions="CenterAndExpand" FontSize="18" TextColor="Black" Margin="0,50,0,0" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                            <On Platform="iOS" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <button:SfButton Text="BACK" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" WidthRequest="450" CornerRadius="15" Clicked="btnBackTab1_Click" >
+                    <button:SfButton.BackgroundGradient>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Color="#1ECB9F" Offset="0"/>
+                                <gradient:SfGradientStop Color="#078968" Offset="1"/>
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </button:SfButton.BackgroundGradient>
+                    <button:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                            <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                        </OnPlatform>
+                    </button:SfButton.FontFamily>
+                </button:SfButton>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    <ContentPage Title="Verified" IconImageSource="verified.png">
+        <ScrollView>
+            <StackLayout Margin="10,10,10,10" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image Source="logo.png" WidthRequest="250" Margin="0,50,0,0"/>
+                <Label x:Name="TxtLabel2" Text="TABBED PAGE 2" HorizontalOptions="CenterAndExpand" FontSize="18" TextColor="Black" Margin="0,50,0,0" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                            <On Platform="iOS" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <button:SfButton Text="BACK" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" WidthRequest="450" CornerRadius="15" Clicked="btnBackTab2_Click">
+                    <button:SfButton.BackgroundGradient>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Color="#1ECB9F" Offset="0"/>
+                                <gradient:SfGradientStop Color="#078968" Offset="1"/>
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </button:SfButton.BackgroundGradient>
+                    <button:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                            <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                        </OnPlatform>
+                    </button:SfButton.FontFamily>
+                </button:SfButton>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+    
+    <ContentPage Title="Reciept" IconImageSource="receipt.png">
+        <ScrollView>
+            <StackLayout Margin="10,10,10,10" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image Source="logo.png" WidthRequest="250" Margin="0,50,0,0"/>
+                <Label x:Name="TxtLabel3" Text="TABBED PAGE 3" HorizontalOptions="CenterAndExpand" FontSize="18" TextColor="Black" Margin="0,50,0,0" >
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                            <On Platform="iOS" Value="Roboto_Black_900.ttf#Roboto_Black_900"/>
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+                <button:SfButton Text="BACK" TextColor="White"  CommandParameter ="{Binding .}" FontSize="Small" HeightRequest="47" WidthRequest="450" CornerRadius="15" Clicked="btnBackTab3_Click">
+                    <button:SfButton.BackgroundGradient>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Color="#1ECB9F" Offset="0"/>
+                                <gradient:SfGradientStop Color="#078968" Offset="1"/>
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </button:SfButton.BackgroundGradient>
+                    <button:SfButton.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android" Value="Roboto-400.ttf#Roboto-400"/>
+                            <On Platform="iOS" Value="Roboto-400.ttf#Roboto-400"/>
+                        </OnPlatform>
+                    </button:SfButton.FontFamily>
+                </button:SfButton>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+</TabbedPage>

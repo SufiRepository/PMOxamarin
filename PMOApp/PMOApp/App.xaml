@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PMOApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="Black"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
+            <Style x:Key="HomePrimary" TargetType="Button">
+                <Setter Property="CornerRadius" Value="100"/>
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="WidthRequest" Value="48"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Margin" Value="0,0,0,5"/>
+                <Setter Property="CornerRadius">
+                    <OnPlatform iOS="25" Android="100"/>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
